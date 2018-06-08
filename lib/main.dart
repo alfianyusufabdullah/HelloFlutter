@@ -23,7 +23,7 @@ class Page extends StatefulWidget {
 class PageState extends State<Page> {
   final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  String kelas = "MADE";
+  String kelas = "Menjadi Android Developer Expert";
 
   void setKelas(String kelas) {
     setState(() {
@@ -75,7 +75,7 @@ class PageState extends State<Page> {
                 label: "Kelas MADE",
                 onClick: () {
                   Navigator.pop(context);
-                  setKelas("MADE");
+                  setKelas("Menjadi Android Developer Expert");
                 },
               ),
               new DrawerItems(
@@ -83,7 +83,7 @@ class PageState extends State<Page> {
                 label: "Kelas KADE",
                 onClick: () {
                   Navigator.pop(context);
-                  setKelas("KADE");
+                  setKelas("Kotlin Android Developer Expert");
                 },
               ),
               new DrawerItems(
@@ -91,7 +91,7 @@ class PageState extends State<Page> {
                 label: "Kelas MGDE",
                 onClick: () {
                   Navigator.pop(context);
-                  setKelas('MGDE');
+                  setKelas('Menjadi Game Developer Expert');
                 },
               )
             ],
@@ -100,14 +100,12 @@ class PageState extends State<Page> {
         body: new Center(
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new Text(
-                'Kelas Yang di ikuti',
+                'Kamu ikut kelas\n$kelas',
                 style: new TextStyle(fontSize: 20.0),
-              ),
-              new Text(
-                'Kamu ikut kelas $kelas',
-                style: new TextStyle(fontSize: 20.0),
+                textAlign: TextAlign.center,
               )
             ],
           ),
